@@ -1,68 +1,64 @@
-Projeto G1: Cadeias de Raciocínio Dinâmicas
-Objetivo: Melhorar as capacidades de raciocínio dos Modelos de Linguagem (LLMs) por meio de estratégias de prompting, capacitando-os a resolver problemas lógicos complexos.
+# Projeto G1: Cadeias de Raciocínio Dinâmicas
 
-Como Funciona:
-Modelo Utilizado: Llama3.1-70b
+**Objetivo:** Melhorar as capacidades de raciocínio dos Modelos de Linguagem (LLMs) por meio de estratégias de prompting, capacitando-os a resolver problemas lógicos complexos.
 
-Cadeias de Raciocínio: O modelo cria cadeias de raciocínio dinâmicas que permitem simular um processo de pensamento, resolvendo problemas lógicos passo a passo.
+## Como Funciona:
 
-Passos Visíveis: Cada etapa do raciocínio é apresentada de forma clara ao usuário. O modelo pode decidir entre avançar para o próximo passo ou fornecer uma resposta final.
+**Modelo Utilizado:** Llama3.1-70b
 
-Prompt Breakdown: Inclui diretrizes para o LLM, como explorar respostas alternativas e empregar múltiplos métodos para chegar à solução.
+**Cadeias de Raciocínio:** O modelo cria cadeias de raciocínio dinâmicas que permitem simular um processo de pensamento, resolvendo problemas lógicos passo a passo.
 
-Estratégia de Prompting:
-Passos Detalhados: O LLM deve fornecer um título e conteúdo para cada passo do raciocínio, decidindo se é necessário mais um passo ou se pode dar a resposta final.
-Formato JSON: As respostas são apresentadas em formato JSON, contendo as chaves title, content e next_action (continuar ou resposta final).
-Melhores Práticas: Encorajar a exploração de respostas alternativas, reavaliação de respostas iniciais, utilização de pelo menos três métodos diferentes para derivar a resposta e estar ciente das limitações do LLM.
-Resultados:
-Problema do Morango: O G1 alcançou cerca de 70% de precisão na questão “Quantos Rs há em morango?”, sem necessidade de treinamento adicional.
-Comparação: Sem prompting, o Llama-3.1-70b obteve 0% de precisão, enquanto o ChatGPT-4.0 alcançou apenas 30%.
-Instruções de Uso
-Streamlit UI:
+**Passos Visíveis:** Cada etapa do raciocínio é apresentada de forma clara ao usuário. O modelo pode decidir entre avançar para o próximo passo ou fornecer uma resposta final.
 
-Crie um ambiente virtual:
+**Prompt Breakdown:** Inclui diretrizes para o LLM, como explorar respostas alternativas e empregar múltiplos métodos para chegar à solução.
 
-bash
-Copiar código
-python3 -m venv venv
-source venv/bin/activate
-Instale as dependências:
+## Estratégia de Prompting:
 
-bash
-Copiar código
-pip3 install -r requirements.txt
-Configure a chave da API:
+- **Passos Detalhados:** O LLM deve fornecer um título e conteúdo para cada passo do raciocínio, decidindo se é necessário mais um passo ou se pode dar a resposta final.
+- **Formato JSON:** As respostas são apresentadas em formato JSON, contendo as chaves `title`, `content` e `next_action` (continuar ou resposta final).
+- **Melhores Práticas:** Encorajar a exploração de respostas alternativas, reavaliação de respostas iniciais, utilização de pelo menos três métodos diferentes para derivar a resposta e estar ciente das limitações do LLM.
 
-bash
-Copiar código
-export GROQ_API_KEY=gsk...
-Execute a aplicação:
+## Resultados:
 
-bash
-Copiar código
-streamlit run app.py
-Gradio UI:
+- **Problema do Morango:** O G1 alcançou cerca de 70% de precisão na questão “Quantos Rs há em morango?”, sem necessidade de treinamento adicional.
+- **Comparação:** Sem prompting, o Llama-3.1-70b obteve 0% de precisão, enquanto o ChatGPT-4.0 alcançou apenas 30%.
 
-Navegue até o diretório Gradio:
+## Instruções de Uso
 
-bash
-Copiar código
-cd gradio
-Instale as dependências:
+### Streamlit UI:
 
-bash
-Copiar código
-pip3 install -r requirements.txt
-Execute a aplicação:
+1. **Crie um ambiente virtual:**
+   ```bash
+   python3 -m venv venv
+   source venv/bin/activate
 
-bash
-Copiar código
-python3 app.py
-Licença e Código
-O Projeto G1 é open source e está disponível no GitHub. Ele utiliza bibliotecas como Streamlit e Gradio para a interface do usuário. Qualquer interessado pode acessar, instalar e contribuir para o projeto.
+2. **Instale as dependências:**
+   ```bash
+   pip3 install -r requirements.txt
+   source venv/bin/activate
 
-Público-Alvo
-Desenvolvedores e Pesquisadores: Interessados em aprimorar as capacidades de raciocínio dos LLMs.
-Gerentes de TI e Projetos: Que buscam soluções inovadoras para problemas lógicos complexos.
-Diretores: Que desejam explorar novas tecnologias para melhorar a eficiência e a precisão dos processos de tomada de decisão.
+3. **Configure a chave da API:**
+   ```bash
+   export GROQ_API_KEY=gsk...
+   https://console.groq.com/keys
 
+4. **Execute a aplicação:**
+   ```bash
+   streamlit run app.py
+   https://console.groq.com/keys
+
+=====
+1. **Gradio UI:**
+   ```bash
+   cd gradio 
+   Navegue até o diretório Gradio
+
+2. **Execute a aplicação:**
+   ```bash
+   pip3 install -r requirements.txt
+   
+
+3. **Execute a aplicação:**
+   ```bash
+   python3 app.py
+  
