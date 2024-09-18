@@ -1,0 +1,68 @@
+Projeto G1: Cadeias de Raciocínio Dinâmicas
+Objetivo: Melhorar as capacidades de raciocínio dos Modelos de Linguagem (LLMs) por meio de estratégias de prompting, capacitando-os a resolver problemas lógicos complexos.
+
+Como Funciona:
+Modelo Utilizado: Llama3.1-70b
+
+Cadeias de Raciocínio: O modelo cria cadeias de raciocínio dinâmicas que permitem simular um processo de pensamento, resolvendo problemas lógicos passo a passo.
+
+Passos Visíveis: Cada etapa do raciocínio é apresentada de forma clara ao usuário. O modelo pode decidir entre avançar para o próximo passo ou fornecer uma resposta final.
+
+Prompt Breakdown: Inclui diretrizes para o LLM, como explorar respostas alternativas e empregar múltiplos métodos para chegar à solução.
+
+Estratégia de Prompting:
+Passos Detalhados: O LLM deve fornecer um título e conteúdo para cada passo do raciocínio, decidindo se é necessário mais um passo ou se pode dar a resposta final.
+Formato JSON: As respostas são apresentadas em formato JSON, contendo as chaves title, content e next_action (continuar ou resposta final).
+Melhores Práticas: Encorajar a exploração de respostas alternativas, reavaliação de respostas iniciais, utilização de pelo menos três métodos diferentes para derivar a resposta e estar ciente das limitações do LLM.
+Resultados:
+Problema do Morango: O G1 alcançou cerca de 70% de precisão na questão “Quantos Rs há em morango?”, sem necessidade de treinamento adicional.
+Comparação: Sem prompting, o Llama-3.1-70b obteve 0% de precisão, enquanto o ChatGPT-4.0 alcançou apenas 30%.
+Instruções de Uso
+Streamlit UI:
+
+Crie um ambiente virtual:
+
+bash
+Copiar código
+python3 -m venv venv
+source venv/bin/activate
+Instale as dependências:
+
+bash
+Copiar código
+pip3 install -r requirements.txt
+Configure a chave da API:
+
+bash
+Copiar código
+export GROQ_API_KEY=gsk...
+Execute a aplicação:
+
+bash
+Copiar código
+streamlit run app.py
+Gradio UI:
+
+Navegue até o diretório Gradio:
+
+bash
+Copiar código
+cd gradio
+Instale as dependências:
+
+bash
+Copiar código
+pip3 install -r requirements.txt
+Execute a aplicação:
+
+bash
+Copiar código
+python3 app.py
+Licença e Código
+O Projeto G1 é open source e está disponível no GitHub. Ele utiliza bibliotecas como Streamlit e Gradio para a interface do usuário. Qualquer interessado pode acessar, instalar e contribuir para o projeto.
+
+Público-Alvo
+Desenvolvedores e Pesquisadores: Interessados em aprimorar as capacidades de raciocínio dos LLMs.
+Gerentes de TI e Projetos: Que buscam soluções inovadoras para problemas lógicos complexos.
+Diretores: Que desejam explorar novas tecnologias para melhorar a eficiência e a precisão dos processos de tomada de decisão.
+
